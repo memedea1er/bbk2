@@ -7,8 +7,8 @@ class GameRecommendationSystem:
             {
                 "id": 1,
                 "title": "The Witcher 3: Wild Hunt",
-                "platform": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
-                "genre": "RPG",
+                "platform": ["PC", "игровая консоль"],
+                "genre": "Ролевая игра",
                 "setting": "Фэнтези",
                 "rating": "M",
                 "price": "AAA-цена",
@@ -19,8 +19,8 @@ class GameRecommendationSystem:
             {
                 "id": 2,
                 "title": "Cyberpunk 2077",
-                "platform": ["PC", "PlayStation 5", "PlayStation 4", "Xbox Series X/S", "Xbox One"],
-                "genre": "RPG",
+                "platform": ["PC", "игровая консоль"],
+                "genre": "Ролевая игра",
                 "setting": "Киберпанк",
                 "rating": "M",
                 "price": "AAA-цена",
@@ -31,8 +31,8 @@ class GameRecommendationSystem:
             {
                 "id": 3,
                 "title": "Elden Ring",
-                "platform": ["PC", "PlayStation 5", "PlayStation 4", "Xbox Series X/S", "Xbox One"],
-                "genre": "RPG",
+                "platform": ["PC", "игровая консоль"],
+                "genre": "Ролевая игра",
                 "setting": "Фэнтези",
                 "rating": "M",
                 "price": "AAA-цена",
@@ -43,8 +43,8 @@ class GameRecommendationSystem:
             {
                 "id": 4,
                 "title": "Skyrim",
-                "platform": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
-                "genre": "RPG",
+                "platform": ["PC", "игровая консоль"],
+                "genre": "Ролевая игра",
                 "setting": "Фэнтези",
                 "rating": "M",
                 "price": "AAA-цена",
@@ -55,8 +55,8 @@ class GameRecommendationSystem:
             {
                 "id": 5,
                 "title": "Mass Effect: Legendary Edition",
-                "platform": ["PC", "PlayStation 4", "Xbox One"],
-                "genre": "RPG",
+                "platform": ["PC", "игровая консоль"],
+                "genre": "Ролевая игра",
                 "setting": "Научная фантастика",
                 "rating": "M",
                 "price": "AAA-цена",
@@ -67,7 +67,7 @@ class GameRecommendationSystem:
             {
                 "id": 6,
                 "title": "Disco Elysium",
-                "platform": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "RPG",
                 "setting": "Современный",
                 "rating": "M",
@@ -93,7 +93,7 @@ class GameRecommendationSystem:
             {
                 "id": 8,
                 "title": "The Last of Us Part I",
-                "platform": ["PC", "PlayStation 5"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Экшен",
                 "setting": "Постапокалипсис",
                 "rating": "M",
@@ -105,8 +105,7 @@ class GameRecommendationSystem:
             {
                 "id": 9,
                 "title": "Fortnite",
-                "platform": ["PC", "PlayStation 5", "PlayStation 4", "Xbox Series X/S", "Xbox One", "Nintendo Switch",
-                             "мобильные устройства"],
+                "platform": ["PC", "игровая консоль", "мобильные устройства"],
                 "genre": "Экшен",
                 "setting": "Современный",
                 "rating": "T",
@@ -118,7 +117,7 @@ class GameRecommendationSystem:
             {
                 "id": 10,
                 "title": "DOOM Eternal",
-                "platform": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Экшен",
                 "setting": "Научная фантастика",
                 "rating": "M",
@@ -130,7 +129,7 @@ class GameRecommendationSystem:
             {
                 "id": 11,
                 "title": "Grand Theft Auto V",
-                "platform": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Экшен",
                 "setting": "Современный",
                 "rating": "M",
@@ -142,7 +141,7 @@ class GameRecommendationSystem:
             {
                 "id": 12,
                 "title": "Red Dead Redemption 2",
-                "platform": ["PC", "PlayStation 4", "Xbox One"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Экшен",
                 "setting": "Исторический",
                 "rating": "M",
@@ -156,7 +155,7 @@ class GameRecommendationSystem:
             {
                 "id": 13,
                 "title": "Hollow Knight",
-                "platform": ["PC", "PlayStation 4", "Xbox One", "Nintendo Switch"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Приключения",
                 "setting": "Фэнтези",
                 "rating": "E10+",
@@ -168,7 +167,7 @@ class GameRecommendationSystem:
             {
                 "id": 14,
                 "title": "The Legend of Zelda: Breath of the Wild",
-                "platform": ["Nintendo Switch"],
+                "platform": ["игровая консоль"],
                 "genre": "Приключения",
                 "setting": "Фэнтези",
                 "rating": "E10+",
@@ -180,7 +179,7 @@ class GameRecommendationSystem:
             {
                 "id": 15,
                 "title": "God of War (2018)",
-                "platform": ["PC", "PlayStation 4", "PlayStation 5"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Приключения",
                 "setting": "Фэнтези",
                 "rating": "M",
@@ -192,7 +191,7 @@ class GameRecommendationSystem:
             {
                 "id": 16,
                 "title": "Uncharted 4: A Thief's End",
-                "platform": ["PC", "PlayStation 4", "PlayStation 5"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Приключения",
                 "setting": "Современный",
                 "rating": "T",
@@ -204,7 +203,7 @@ class GameRecommendationSystem:
             {
                 "id": 17,
                 "title": "Ori and the Will of the Wisps",
-                "platform": ["PC", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Приключения",
                 "setting": "Фэнтези",
                 "rating": "E10+",
@@ -218,7 +217,7 @@ class GameRecommendationSystem:
             {
                 "id": 18,
                 "title": "Civilization VI",
-                "platform": ["PC", "PlayStation 4", "Xbox One", "Nintendo Switch"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Стратегии",
                 "setting": "Исторический",
                 "rating": "E10+",
@@ -242,7 +241,7 @@ class GameRecommendationSystem:
             {
                 "id": 20,
                 "title": "XCOM 2",
-                "platform": ["PC", "PlayStation 4", "Xbox One", "Nintendo Switch"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Стратегии",
                 "setting": "Научная фантастика",
                 "rating": "M",
@@ -254,7 +253,7 @@ class GameRecommendationSystem:
             {
                 "id": 21,
                 "title": "Crusader Kings III",
-                "platform": ["PC", "PlayStation 5", "Xbox Series X/S"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Стратегии",
                 "setting": "Исторический",
                 "rating": "M",
@@ -266,7 +265,7 @@ class GameRecommendationSystem:
             {
                 "id": 22,
                 "title": "Age of Empires IV",
-                "platform": ["PC", "Xbox Series X/S"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Стратегии",
                 "setting": "Исторический",
                 "rating": "T",
@@ -280,7 +279,7 @@ class GameRecommendationSystem:
             {
                 "id": 23,
                 "title": "Stardew Valley",
-                "platform": ["PC", "PlayStation 4", "Xbox One", "Nintendo Switch", "мобильные устройства"],
+                "platform": ["PC", "игровая консоль", "мобильные устройства"],
                 "genre": "Симуляторы",
                 "setting": "Современный",
                 "rating": "E",
@@ -292,7 +291,7 @@ class GameRecommendationSystem:
             {
                 "id": 24,
                 "title": "The Sims 4",
-                "platform": ["PC", "PlayStation 4", "Xbox One"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Симуляторы",
                 "setting": "Современный",
                 "rating": "T",
@@ -304,7 +303,7 @@ class GameRecommendationSystem:
             {
                 "id": 25,
                 "title": "Microsoft Flight Simulator",
-                "platform": ["PC", "Xbox Series X/S"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Симуляторы",
                 "setting": "Современный",
                 "rating": "E",
@@ -316,7 +315,7 @@ class GameRecommendationSystem:
             {
                 "id": 26,
                 "title": "Cities: Skylines",
-                "platform": ["PC", "PlayStation 4", "Xbox One", "Nintendo Switch"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Симуляторы",
                 "setting": "Современный",
                 "rating": "E",
@@ -328,7 +327,7 @@ class GameRecommendationSystem:
             {
                 "id": 27,
                 "title": "Farming Simulator 22",
-                "platform": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Симуляторы",
                 "setting": "Современный",
                 "rating": "E",
@@ -342,7 +341,7 @@ class GameRecommendationSystem:
             {
                 "id": 28,
                 "title": "Forza Horizon 5",
-                "platform": ["PC", "Xbox Series X/S", "Xbox One"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Гонки",
                 "setting": "Современный",
                 "rating": "E",
@@ -354,7 +353,7 @@ class GameRecommendationSystem:
             {
                 "id": 29,
                 "title": "Gran Turismo 7",
-                "platform": ["PlayStation 4", "PlayStation 5"],
+                "platform": ["игровая консоль"],
                 "genre": "Гонки",
                 "setting": "Современный",
                 "rating": "E",
@@ -366,7 +365,7 @@ class GameRecommendationSystem:
             {
                 "id": 30,
                 "title": "Mario Kart 8 Deluxe",
-                "platform": ["Nintendo Switch"],
+                "platform": ["игровая консоль"],
                 "genre": "Гонки",
                 "setting": "Фэнтези",
                 "rating": "E",
@@ -378,7 +377,7 @@ class GameRecommendationSystem:
             {
                 "id": 31,
                 "title": "F1 2023",
-                "platform": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Гонки",
                 "setting": "Современный",
                 "rating": "E",
@@ -392,7 +391,7 @@ class GameRecommendationSystem:
             {
                 "id": 32,
                 "title": "FIFA 23",
-                "platform": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Спортивные",
                 "setting": "Современный",
                 "rating": "E",
@@ -404,7 +403,7 @@ class GameRecommendationSystem:
             {
                 "id": 33,
                 "title": "NBA 2K23",
-                "platform": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Спортивные",
                 "setting": "Современный",
                 "rating": "E",
@@ -416,7 +415,7 @@ class GameRecommendationSystem:
             {
                 "id": 34,
                 "title": "Rocket League",
-                "platform": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S", "Nintendo Switch"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Спортивные",
                 "setting": "Современный",
                 "rating": "E",
@@ -428,7 +427,7 @@ class GameRecommendationSystem:
             {
                 "id": 35,
                 "title": "Tony Hawk's Pro Skater 1+2",
-                "platform": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Спортивные",
                 "setting": "Современный",
                 "rating": "T",
@@ -442,7 +441,7 @@ class GameRecommendationSystem:
             {
                 "id": 36,
                 "title": "Resident Evil 4 Remake",
-                "platform": ["PC", "PlayStation 5", "PlayStation 4", "Xbox Series X/S"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Экшен",
                 "setting": "Хоррор",
                 "rating": "M",
@@ -454,8 +453,7 @@ class GameRecommendationSystem:
             {
                 "id": 37,
                 "title": "Dead by Daylight",
-                "platform": ["PC", "PlayStation 4", "PlayStation 5", "Xbox One", "Xbox Series X/S", "Nintendo Switch",
-                             "мобильные устройства"],
+                "platform": ["PC", "игровая консоль", "мобильные устройства"],
                 "genre": "Экшен",
                 "setting": "Хоррор",
                 "rating": "M",
@@ -467,7 +465,7 @@ class GameRecommendationSystem:
             {
                 "id": 38,
                 "title": "The Evil Within 2",
-                "platform": ["PC", "PlayStation 4", "Xbox One"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Экшен",
                 "setting": "Хоррор",
                 "rating": "M",
@@ -481,7 +479,7 @@ class GameRecommendationSystem:
             {
                 "id": 39,
                 "title": "Bioshock Infinite",
-                "platform": ["PC", "PlayStation 4", "Xbox One", "Nintendo Switch"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Экшен",
                 "setting": "Стимпанк",
                 "rating": "M",
@@ -493,7 +491,7 @@ class GameRecommendationSystem:
             {
                 "id": 40,
                 "title": "Dishonored 2",
-                "platform": ["PC", "PlayStation 4", "Xbox One"],
+                "platform": ["PC", "игровая консоль"],
                 "genre": "Экшен",
                 "setting": "Стимпанк",
                 "rating": "M",
@@ -506,16 +504,15 @@ class GameRecommendationSystem:
 
         # Доступные варианты для каждого критерия
         self.criteria_options = {
-            'platform': ['PC', 'PlayStation 5', 'PlayStation 4', 'Xbox Series X/S', 'Xbox One', 'Nintendo Switch',
-                         'мобильные устройства'],
-            'genre': ['Экшен', 'Приключения', 'RPG', 'Стратегии', 'Симуляторы', 'Гонки', 'Спортивные'],
+            'platform': ['PC', 'игровая консоль', 'мобильные устройства'],
+            'genre': ['Экшен', 'Приключения', 'Ролевая игра', 'Стратегии', 'Симуляторы', 'Гонки', 'Спортивные'],
             'setting': ['Фэнтези', 'Научная фантастика', 'Киберпанк', 'Стимпанк', 'Постапокалипсис', 'Исторический',
                         'Современный', 'Хоррор'],
             'rating': ['E', 'E10+', 'T', 'M'],
             'price': ['Бесплатная', 'инди-цена', 'AAA-цена'],
             'game_type': ['Одиночная', 'Многопользовательская', 'Кооператив', 'Соревновательный'],
             'duration': ['Короткая', 'средняя', 'долгая', 'океан контента'],
-            'graphics': ['Фотореализм', 'стилизованная графика', 'пиксель-арт', 'низкополигональная', 'cel-shading']
+            'graphics': ['Фотореализм', 'стилизованная графика', 'пиксель-арт']
         }
 
         # Для удобства вывода полных названий
@@ -526,6 +523,13 @@ class GameRecommendationSystem:
             'M': 'Для взрослых (M/A)'
         }
 
+        self.price_names = {
+            'Бесплатная': 'Бесплатная',
+            'инди-цена': 'инди-цена (до 1000 рублей)',
+            'AAA-цена': 'AAA-цена (более 2000 рублей)',
+        }
+
+
         self.duration_names = {
             'Короткая': 'Короткая (менее 10 часов)',
             'средняя': 'Средняя (10-30 часов)',
@@ -534,9 +538,9 @@ class GameRecommendationSystem:
         }
 
     def get_user_preferences(self):
-        """Запрос предпочтений у пользователя"""
+        """Запрос предпочтений у пользователя с вопросами да/нет"""
         print("=== СИСТЕМА ПОДБОРА ВИДЕОИГР ===")
-        print("Ответьте на вопросы о ваших предпочтениях:\n")
+        print("Ответьте на вопросы о ваших предпочтениях (да/нет):\n")
 
         preferences = {}
 
@@ -545,28 +549,34 @@ class GameRecommendationSystem:
         for i, platform in enumerate(self.criteria_options['platform'], 1):
             print(f"{i}. {platform}")
 
-        platform_choice = input("\nВведите номера предпочитаемых платформ через запятую (например: 1,3,5): ")
+        platform_choice = input("\nВведите номера предпочитаемых платформ через запятую (например: 1,2,3): ")
         platform_indices = [int(x.strip()) - 1 for x in platform_choice.split(',') if x.strip().isdigit()]
         preferences['platform'] = [self.criteria_options['platform'][i] for i in platform_indices if
                                    0 <= i < len(self.criteria_options['platform'])]
 
-        # Жанр
-        print("\nДоступные жанры:")
-        for i, genre in enumerate(self.criteria_options['genre'], 1):
-            print(f"{i}. {genre}")
+        # Жанры (вопросы да/нет)
+        print("\nКакие жанры вам нравятся? (отвечайте да/нет)")
+        preferred_genres = []
 
-        genre_choice = input("Выберите номер жанра: ")
-        if genre_choice.isdigit() and 1 <= int(genre_choice) <= len(self.criteria_options['genre']):
-            preferences['genre'] = self.criteria_options['genre'][int(genre_choice) - 1]
+        for genre in self.criteria_options['genre']:
+            response = input(f"Вам нравится {genre.lower()}? ").lower().strip()
+            if response in ['да', 'д', 'yes', 'y']:
+                preferred_genres.append(genre)
 
-        # Сеттинг
-        print("\nДоступные сеттинги:")
-        for i, setting in enumerate(self.criteria_options['setting'], 1):
-            print(f"{i}. {setting}")
+        if preferred_genres:
+            preferences['genre'] = preferred_genres
 
-        setting_choice = input("Выберите номер сеттинга: ")
-        if setting_choice.isdigit() and 1 <= int(setting_choice) <= len(self.criteria_options['setting']):
-            preferences['setting'] = self.criteria_options['setting'][int(setting_choice) - 1]
+        # Сеттинги (вопросы да/нет)
+        print("\nКакие сеттинги вам нравятся? (отвечайте да/нет)")
+        preferred_settings = []
+
+        for setting in self.criteria_options['setting']:
+            response = input(f"Вам нравится сеттинг {setting.lower()}? ").lower().strip()
+            if response in ['да', 'д', 'yes', 'y']:
+                preferred_settings.append(setting)
+
+        if preferred_settings:
+            preferences['setting'] = preferred_settings
 
         # Возрастной рейтинг
         print("\nДоступные возрастные рейтинги:")
@@ -580,21 +590,23 @@ class GameRecommendationSystem:
         # Цена
         print("\nДоступные ценовые категории:")
         for i, price in enumerate(self.criteria_options['price'], 1):
-            print(f"{i}. {price}")
+            print(f"{i}. {self.price_names[price]}")
 
         price_choice = input("Выберите номер ценовой категории: ")
         if price_choice.isdigit() and 1 <= int(price_choice) <= len(self.criteria_options['price']):
             preferences['price'] = self.criteria_options['price'][int(price_choice) - 1]
 
-        # Тип игры (можно выбрать несколько)
-        print("\nДоступные типы игры:")
-        for i, game_type in enumerate(self.criteria_options['game_type'], 1):
-            print(f"{i}. {game_type}")
+        # Тип игры (вопросы да/нет)
+        print("\nКакие типы игр вам нравятся? (отвечайте да/нет)")
+        preferred_game_types = []
 
-        type_choice = input("Введите номера предпочитаемых типов через запятую: ")
-        type_indices = [int(x.strip()) - 1 for x in type_choice.split(',') if x.strip().isdigit()]
-        preferences['game_type'] = [self.criteria_options['game_type'][i] for i in type_indices if
-                                    0 <= i < len(self.criteria_options['game_type'])]
+        for game_type in self.criteria_options['game_type']:
+            response = input(f"Вам нравятся {game_type.lower()} игры? ").lower().strip()
+            if response in ['да', 'д', 'yes', 'y']:
+                preferred_game_types.append(game_type)
+
+        if preferred_game_types:
+            preferences['game_type'] = preferred_game_types
 
         # Продолжительность
         print("\nДоступная продолжительность:")
@@ -605,86 +617,121 @@ class GameRecommendationSystem:
         if duration_choice.isdigit() and 1 <= int(duration_choice) <= len(self.criteria_options['duration']):
             preferences['duration'] = self.criteria_options['duration'][int(duration_choice) - 1]
 
-        # Графика
-        print("\nДоступные стили графики:")
-        for i, graphics in enumerate(self.criteria_options['graphics'], 1):
-            print(f"{i}. {graphics}")
+        # Графика (вопросы да/нет)
+        print("\nКакие стили графики вам нравятся? (отвечайте да/нет)")
+        preferred_graphics = []
 
-        graphics_choice = input("Выберите номер стиля графики: ")
-        if graphics_choice.isdigit() and 1 <= int(graphics_choice) <= len(self.criteria_options['graphics']):
-            preferences['graphics'] = self.criteria_options['graphics'][int(graphics_choice) - 1]
+        for graphics in self.criteria_options['graphics']:
+            response = input(f"Вам нравится {graphics.lower()}? ").lower().strip()
+            if response in ['да', 'д', 'yes', 'y']:
+                preferred_graphics.append(graphics)
+
+        if preferred_graphics:
+            preferences['graphics'] = preferred_graphics
 
         return preferences
 
     def find_matching_games(self, preferences):
-        """Поиск игр, соответствующих предпочтениям пользователя"""
-        matching_games = []
+        """Поиск игр с системой баллов - более гибкий подход"""
+        scored_games = []
 
         for game in self.games_db:
-            # Проверка платформы (хотя бы одна должна совпадать)
+            score = 0
+            reasons = []
+
+            # Платформа (важный критерий - 10 баллов)
             if preferences.get('platform'):
                 platform_match = any(platform in game['platform'] for platform in preferences['platform'])
-                if not platform_match:
-                    continue
+                if platform_match:
+                    score += 10
+                    reasons.append("✓ Подходит по платформе")
+                else:
+                    reasons.append("✗ Не подходит по платформе")
+                    continue  # Платформа - обязательный критерий
 
-            # Проверка жанра
-            if preferences.get('genre') and game['genre'] != preferences['genre']:
-                continue
+            # Жанр (очень важный - 8 баллов)
+            if preferences.get('genre'):
+                if game['genre'] in preferences['genre']:
+                    score += 8
+                    reasons.append("✓ Идеально по жанру")
+                else:
+                    reasons.append("✗ Не подходит по жанру")
 
-            # Проверка сеттинга
-            if preferences.get('setting') and game['setting'] != preferences['setting']:
-                continue
+            # Сеттинг (важный - 6 баллов)
+            if preferences.get('setting'):
+                if game['setting'] in preferences['setting']:
+                    score += 6
+                    reasons.append("✓ Идеально по сеттингу")
+                else:
+                    reasons.append("~ Другой сеттинг")
 
-            # Проверка возрастного рейтинга
-            if preferences.get('rating') and game['rating'] != preferences['rating']:
-                continue
+            # Цена (важный - 7 баллов)
+            if preferences.get('price'):
+                if game['price'] == preferences['price']:
+                    score += 7
+                    reasons.append("✓ Подходит по цене")
+                else:
+                    reasons.append("~ Другая ценовая категория")
 
-            # Проверка цены
-            if preferences.get('price') and game['price'] != preferences['price']:
-                continue
-
-            # Проверка типа игры (хотя бы один должен совпадать)
+            # Тип игры (важный - 7 баллов)
             if preferences.get('game_type'):
                 type_match = any(game_type in game['game_type'] for game_type in preferences['game_type'])
-                if not type_match:
-                    continue
+                if type_match:
+                    score += 7
+                    reasons.append("✓ Подходит по типу игры")
+                else:
+                    reasons.append("~ Не совсем подходит по типу игры")
 
-            # Проверка продолжительности
-            if preferences.get('duration') and game['duration'] != preferences['duration']:
-                continue
+            # Продолжительность (менее важный - 3 балла)
+            if preferences.get('duration') and game['duration'] == preferences['duration']:
+                score += 3
+                reasons.append("✓ Подходит по продолжительности")
 
-            # Проверка графики
-            if preferences.get('graphics') and game['graphics'] != preferences['graphics']:
-                continue
+            # Графика (менее важный - 3 балла)
+            if preferences.get('graphics'):
+                if game['graphics'] in preferences['graphics']:
+                    score += 3
+                    reasons.append("✓ Подходит по графике")
+                else:
+                    reasons.append("~ Другой стиль графики")
 
-            # Если все критерии совпали, добавляем игру в результат
-            matching_games.append(game)
+            # Добавляем игру с баллом, если прошла обязательные критерии
+            scored_games.append({
+                'game': game,
+                'score': score,
+                'reasons': reasons
+            })
 
-        return matching_games
+        # Сортируем по убыванию баллов
+        scored_games.sort(key=lambda x: x['score'], reverse=True)
+        return scored_games
 
-    def display_results(self, games, preferences):
-        """Отображение результатов подбора"""
-        print("\n" + "=" * 50)
-        print("РЕЗУЛЬТАТЫ ПОДБОРА")
-        print("=" * 50)
+    def display_results(self, results, preferences):
+        """Отображение результатов с балльной системой"""
+        print("\n" + "=" * 60)
+        print("РЕЗУЛЬТАТЫ ПОДБОРА (отсортированы по релевантности)")
+        print("=" * 60)
 
-        if not games:
-            print("К сожалению, по вашим критериям не найдено подходящих игр.")
-            print("Попробуйте изменить некоторые параметры поиска.")
+        if not results:
+            print("К сожалению, не найдено идеально подходящих игр.")
+            print("Попробуйте ослабить некоторые критерии поиска.")
             return
 
-        print(f"Найдено игр: {len(games)}\n")
+        print(f"Найдено подходящих игр: {len(results)}\n")
 
-        for i, game in enumerate(games, 1):
-            print(f"{i}. {game['title']}")
+        for i, result in enumerate(results[:10], 1):  # Показываем топ-10
+            game = result['game']
+            print(f"{i}. {game['title']} [Совпадение: {result['score']} баллов]")
             print(f"   Платформы: {', '.join(game['platform'])}")
-            print(f"   Жанр: {game['genre']}")
-            print(f"   Сеттинг: {game['setting']}")
-            print(f"   Рейтинг: {self.rating_names[game['rating']]}")
-            print(f"   Цена: {game['price']}")
-            print(f"   Тип игры: {', '.join(game['game_type'])}")
-            print(f"   Продолжительность: {self.duration_names[game['duration']]}")
-            print(f"   Графика: {game['graphics']}")
+            print(f"   Жанр: {game['genre']} | Сеттинг: {game['setting']}")
+            print(f"   Цена: {game['price']} | Тип: {', '.join(game['game_type'])}")
+
+            # Показываем причины рекомендации
+            if 'reasons' in result:
+                print("   Почему рекомендована:")
+                for reason in result['reasons'][:3]:  # Первые 3 причины
+                    print(f"     {reason}")
+
             print()
 
     def run(self):
