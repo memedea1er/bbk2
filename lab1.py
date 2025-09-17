@@ -529,7 +529,6 @@ class GameRecommendationSystem:
             'AAA-цена': 'AAA-цена (более 2000 рублей)',
         }
 
-
         self.duration_names = {
             'Короткая': 'Короткая (менее 10 часов)',
             'средняя': 'Средняя (10-30 часов)',
@@ -538,14 +537,14 @@ class GameRecommendationSystem:
         }
 
     def get_user_preferences(self):
-        """Запрос предпочтений у пользователя с вопросами да/нет"""
+        """Запрос предпочтений у пользователя с вопросами-ассоциациями"""
         print("=== СИСТЕМА ПОДБОРА ВИДЕОИГР ===")
         print("Ответьте на вопросы о ваших предпочтениях (да/нет):\n")
 
         preferences = {}
 
         # Платформа (можно выбрать несколько)
-        print("Доступные платформы:")
+        print("На каких устройствах вы играете?")
         for i, platform in enumerate(self.criteria_options['platform'], 1):
             print(f"{i}. {platform}")
 
@@ -555,31 +554,52 @@ class GameRecommendationSystem:
                                    0 <= i < len(self.criteria_options['platform'])]
 
         # Жанры (вопросы да/нет)
-        print("\nКакие жанры вам нравятся? (отвечайте да/нет)")
+        print("\nКакие типы игр вам нравятся?")
         preferred_genres = []
 
-        for genre in self.criteria_options['genre']:
-            response = input(f"Вам нравится {genre.lower()}? ").lower().strip()
-            if response in ['да', 'д', 'yes', 'y']:
+        genre_associations = {
+            'Экшен': "Вам нравятся динамичные игры с экшеном и сражениями?",
+            'Приключения': "Вам нравятся исследования и решение загадок?",
+            'Ролевая игра': "Вам нравятся прокачка персонажей и развитие сюжета?",
+            'Стратегии': "Вам нравятся планирование и тактические решения?",
+            'Симуляторы': "Вам нравятся реалистичные симуляции жизни или деятельности?",
+            'Гонки': "Вам нравятся скоростные соревнования и автомобили?",
+            'Спортивные': "Вам нравятся спортивные соревнования и турниры?"
+        }
+
+        for genre, question in genre_associations.items():
+            response = input(f"{question} ").lower().strip()
+            if response in ['да', 'д', 'yes', 'y', 'yes']:
                 preferred_genres.append(genre)
 
         if preferred_genres:
             preferences['genre'] = preferred_genres
 
-        # Сеттинги (вопросы да/нет)
-        print("\nКакие сеттинги вам нравятся? (отвечайте да/нет)")
+        # Сеттинги через ассоциации
+        print("\nКакие миры и атмосферы вам интересны?")
         preferred_settings = []
 
-        for setting in self.criteria_options['setting']:
-            response = input(f"Вам нравится сеттинг {setting.lower()}? ").lower().strip()
-            if response in ['да', 'д', 'yes', 'y']:
+        setting_associations = {
+            'Фэнтези': "Вам нравятся рыцари, магия и древние замки?",
+            'Научная фантастика': "Вам нравятся космос, технологии и будущее?",
+            'Киберпанк': "Вам нравятся неоновые города, кибернетика и высокие технологии?",
+            'Стимпанк': "Вам нравятся паровые машины, шестерёнки и викторианская эпоха?",
+            'Постапокалипсис': "Вам нравятся выживание в разрушенном мире?",
+            'Исторический': "Вам нравятся древние цивилизации и исторические события?",
+            'Современный': "Вам нравятся современные города и реалистичные истории?",
+            'Хоррор': "Вам нравятся ужасы и пугающая атмосфера?"
+        }
+
+        for setting, question in setting_associations.items():
+            response = input(f"{question} ").lower().strip()
+            if response in ['да', 'д', 'yes', 'y', 'yes']:
                 preferred_settings.append(setting)
 
         if preferred_settings:
             preferences['setting'] = preferred_settings
 
         # Возрастной рейтинг
-        print("\nДоступные возрастные рейтинги:")
+        print("\nДля какой возрастной категории ищем игры?")
         for i, rating in enumerate(self.criteria_options['rating'], 1):
             print(f"{i}. {self.rating_names[rating]}")
 
@@ -588,7 +608,7 @@ class GameRecommendationSystem:
             preferences['rating'] = self.criteria_options['rating'][int(rating_choice) - 1]
 
         # Цена
-        print("\nДоступные ценовые категории:")
+        print("\nКакой бюджет вас интересует?")
         for i, price in enumerate(self.criteria_options['price'], 1):
             print(f"{i}. {self.price_names[price]}")
 
@@ -596,20 +616,27 @@ class GameRecommendationSystem:
         if price_choice.isdigit() and 1 <= int(price_choice) <= len(self.criteria_options['price']):
             preferences['price'] = self.criteria_options['price'][int(price_choice) - 1]
 
-        # Тип игры (вопросы да/нет)
-        print("\nКакие типы игр вам нравятся? (отвечайте да/нет)")
+        # Тип игры
+        print("\nКак вы любите играть?")
         preferred_game_types = []
 
-        for game_type in self.criteria_options['game_type']:
-            response = input(f"Вам нравятся {game_type.lower()} игры? ").lower().strip()
-            if response in ['да', 'д', 'yes', 'y']:
+        type_associations = {
+            'Одиночная': "Вам нравятся игры, где можно играть в одиночку?",
+            'Многопользовательская': "Вам нравятся игры с другими игроками онлайн?",
+            'Кооператив': "Вам нравятся игры, где можно играть с друзьями вместе?",
+            'Соревновательный': "Вам нравятся соревнования против других игроков?"
+        }
+
+        for game_type, question in type_associations.items():
+            response = input(f"{question} ").lower().strip()
+            if response in ['да', 'д', 'yes', 'y', 'yes']:
                 preferred_game_types.append(game_type)
 
         if preferred_game_types:
             preferences['game_type'] = preferred_game_types
 
         # Продолжительность
-        print("\nДоступная продолжительность:")
+        print("\nКакую продолжительность игры предпочитаете?")
         for i, duration in enumerate(self.criteria_options['duration'], 1):
             print(f"{i}. {self.duration_names[duration]}")
 
@@ -617,13 +644,19 @@ class GameRecommendationSystem:
         if duration_choice.isdigit() and 1 <= int(duration_choice) <= len(self.criteria_options['duration']):
             preferences['duration'] = self.criteria_options['duration'][int(duration_choice) - 1]
 
-        # Графика (вопросы да/нет)
-        print("\nКакие стили графики вам нравятся? (отвечайте да/нет)")
+        # Графика
+        print("\nКакой визуальный стиль вам нравится?")
         preferred_graphics = []
 
-        for graphics in self.criteria_options['graphics']:
-            response = input(f"Вам нравится {graphics.lower()}? ").lower().strip()
-            if response in ['да', 'д', 'yes', 'y']:
+        graphics_associations = {
+            'Фотореализм': "Вам нравится реалистичная графика, как в кино?",
+            'стилизованная графика': "Вам нравится художественный стиль и уникальный визуал?",
+            'пиксель-арт': "Вам нравится ретро-стиль и пиксельная графика?"
+        }
+
+        for graphics, question in graphics_associations.items():
+            response = input(f"{question} ").lower().strip()
+            if response in ['да', 'д', 'yes', 'y', 'yes']:
                 preferred_graphics.append(graphics)
 
         if preferred_graphics:
@@ -631,6 +664,7 @@ class GameRecommendationSystem:
 
         return preferences
 
+    # ... (остальные методы find_matching_games, display_results, run остаются без изменений)
     def find_matching_games(self, preferences):
         """Поиск игр с системой баллов - более гибкий подход"""
         scored_games = []
