@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система подбора видеоигр</title>
+    <link rel="stylesheet" href="/lab1/staticcss">
+</head>
+<body>
+    <div class="container">
+        <h1>🎮 СИСТЕМА ПОДБОРА ВИДЕОИГР</h1>
+        <p class="subtitle">Ответьте на вопросы о ваших предпочтениях (да/нет):</p>
+
+        <form method="post" action="/recommend">
+            <!-- Платформа -->
+            <div class="form-section">
+                <h2>📱 На каких устройствах вы играете?</h2>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="platform" value="PC">
+                        PC
+                    </label>
+                    <label>
+                        <input type="checkbox" name="platform" value="игровая консоль">
+                        Игровая консоль
+                    </label>
+                    <label>
+                        <input type="checkbox" name="platform" value="мобильные устройства">
+                        Мобильные устройства
+                    </label>
+                </div>
+            </div>
+
+            <!-- Жанр -->
+            <div class="form-section">
+                <h2>🎯 Какие типы игр вам нравятся?</h2>
+                <div class="yesno-group">
+                    {% for genre, question in genre_associations.items() %}
+                    <div class="question">
+                        <p>{{ question }}</p>
+                        <div class="yesno-buttons">
+                            <label>
+                                <input type="radio" name="genre_{{ genre }}" value="yes" required>
+                                Да
+                            </label>
+                            <label>
+                                <input type="radio" name="genre_{{ genre }}" value="no" required>
+                                Нет
+                            </label>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Сеттинг -->
+            <div class="form-section">
+                <h2>🌍 Какие миры и атмосферы вам интересны?</h2>
+                <div class="yesno-group">
+                    {% for setting, question in setting_associations.items() %}
+                    <div class="question">
+                        <p>{{ question }}</p>
+                        <div class="yesno-buttons">
+                            <label>
+                                <input type="radio" name="setting_{{ setting }}" value="yes" required>
+                                Да
+                            </label>
+                            <label>
+                                <input type="radio" name="setting_{{ setting }}" value="no" required>
+                                Нет
+                            </label>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Рейтинг -->
+            <div class="form-section">
+                <h2>👥 Для какой возрастной категории ищем игры?</h2>
+                <div class="radio-group">
+                    {% for rating_key, rating_name in rating_names.items() %}
+                    <label>
+                        <input type="radio" name="rating" value="{{ rating_key }}" required>
+                        {{ rating_name }}
+                    </label>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Цена -->
+            <div class="form-section">
+                <h2>💰 Какой бюджет вас интересует?</h2>
+                <div class="radio-group">
+                    {% for price_key, price_name in price_names.items() %}
+                    <label>
+                        <input type="radio" name="price" value="{{ price_key }}" required>
+                        {{ price_name }}
+                    </label>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Тип игры -->
+            <div class="form-section">
+                <h2>🎪 Как вы любите играть?</h2>
+                <div class="yesno-group">
+                    {% for game_type, question in type_associations.items() %}
+                    <div class="question">
+                        <p>{{ question }}</p>
+                        <div class="yesno-buttons">
+                            <label>
+                                <input type="radio" name="game_type_{{ game_type }}" value="yes" required>
+                                Да
+                            </label>
+                            <label>
+                                <input type="radio" name="game_type_{{ game_type }}" value="no" required>
+                                Нет
+                            </label>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Продолжительность -->
+            <div class="form-section">
+                <h2>⏰ Какую продолжительность игры предпочитаете?</h2>
+                <div class="radio-group">
+                    {% for duration_key, duration_name in duration_names.items() %}
+                    <label>
+                        <input type="radio" name="duration" value="{{ duration_key }}" required>
+                        {{ duration_name }}
+                    </label>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Графика -->
+            <div class="form-section">
+                <h2>🎨 Какой визуальный стиль вам нравится?</h2>
+                <div class="yesno-group">
+                    {% for graphics, question in graphics_associations.items() %}
+                    <div class="question">
+                        <p>{{ question }}</p>
+                        <div class="yesno-buttons">
+                            <label>
+                                <input type="radio" name="graphics_{{ graphics }}" value="yes" required>
+                                Да
+                            </label>
+                            <label>
+                                <input type="radio" name="graphics_{{ graphics }}" value="no" required>
+                                Нет
+                            </label>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Скрытые поля для хранения выбора -->
+            <input type="hidden" name="genre" id="genreInput">
+            <input type="hidden" name="setting" id="settingInput">
+            <input type="hidden" name="game_type" id="gameTypeInput">
+            <input type="hidden" name="graphics" id="graphicsInput">
+
+            <button type="submit" class="submit-btn">🎯 Найти подходящие игры</button>
+        </form>
+
+        <div id="results" class="results-container" style="display: none;">
+            <h2>📊 Результаты подбора</h2>
+            <div id="resultsList"></div>
+        </div>
+    </div>
+</body>
+</html>

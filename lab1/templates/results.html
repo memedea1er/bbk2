@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Результаты рекомендаций</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: #333;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background: #f9f9f9;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 30px;
+        font-size: 1.1em;
+    }
+
+    .results-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .game-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-left: 5px solid #667eea;
+    }
+
+    .game-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+    }
+
+    .game-card h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .score {
+        background: #28a745;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 0.9em;
+    }
+
+    .game-info {
+        color: #555;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    .reasons {
+        background: #f0f0f0;
+        padding: 12px 15px;
+        border-radius: 8px;
+    }
+
+    .reason-item {
+        margin-bottom: 6px;
+        padding-left: 10px;
+        border-left: 3px solid #28a745;
+    }
+
+    .loading {
+        text-align: center;
+        padding: 20px;
+        font-size: 1.2em;
+        color: #444;
+        font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 20px;
+        }
+        h1 { font-size: 2em; }
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Подходящие игры</h1>
+    <p class="subtitle">Список игр, которые лучше всего соответствуют вашим предпочтениям</p>
+
+    <div class="results-container">
+        {% if results %}
+            {% for result in results %}
+            <div class="game-card">
+                <h3>{{ result['game']['title'] }} <span class="score">{{ result['score'] }} баллов</span></h3>
+                <div class="game-info">
+                    <strong>Платформы:</strong> {{ result['game']['platform'] | join(", ") }}<br>
+                    <strong>Жанр / Сеттинг:</strong> {{ result['game']['genre'] }} / {{ result['game']['setting'] }}<br>
+                    <strong>Рейтинг / Цена:</strong> {{ result['game']['rating'] }} / {{ result['game']['price'] }}<br>
+                    <strong>Тип игры / Продолжительность:</strong> {{ result['game']['game_type'] | join(", ") }} / {{ result['game']['duration'] }}<br>
+                    <strong>Графика:</strong> {{ result['game']['graphics'] }}
+                </div>
+                <div class="reasons">
+                    <strong>Причины рекомендации:</strong>
+                    <ul>
+                        {% for reason in result['reasons'] %}
+                        <li class="reason-item">{{ reason }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <div class="loading">Ничего не найдено. Попробуйте изменить ваши предпочтения.</div>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>

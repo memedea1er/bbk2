@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+h2 {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.form-section {
+    background: #f8f9fa;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+}
+
+.checkbox-group, .radio-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.yesno-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.question {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #28a745;
+}
+
+.question p {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #333;
+}
+
+.yesno-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.yesno-btn {
+    padding: 8px 20px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.yesno-btn.yes {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.yesno-btn.no {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.yesno-btn:hover {
+    transform: translateY(-2px);
+}
+
+.yesno-btn.yes:hover {
+    background: #28a745;
+    color: white;
+}
+
+.yesno-btn.no:hover {
+    background: #dc3545;
+    color: white;
+}
+
+.yesno-btn.selected {
+    color: white;
+}
+
+.yesno-btn.yes.selected {
+    background: #28a745;
+    border-color: #28a745;
+}
+
+.yesno-btn.no.selected {
+    background: #dc3545;
+    border-color: #dc3545;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid #e9ecef;
+}
+
+label:hover {
+    border-color: #667eea;
+    transform: translateY(-2px);
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.results-container {
+    margin-top: 30px;
+}
+
+.game-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #28a745;
+}
+
+.game-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+.game-card .score {
+    background: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.game-info {
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.reasons {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.reason-item {
+    margin-bottom: 5px;
+    padding: 5px;
+    border-left: 3px solid #28a745;
+    padding-left: 10px;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .checkbox-group, .radio-group {
+        grid-template-columns: 1fr;
+    }
+
+    .yesno-buttons {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
