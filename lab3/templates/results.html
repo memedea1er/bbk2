@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результаты рекомендации</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card fade-in">
+            <div class="results-header">
+                <h1>🎉 Ваши рекомендации готовы!</h1>
+                <p class="progress-text">Проанализировано на основе {{ asked_questions_count }} вопросов</p>
+            </div>
+
+            <div class="recommendation-card">
+                <h2>🏆 Лучшая рекомендация</h2>
+                <div class="recommendation-title">{{ recommendation.title }}</div>
+                <div class="confidence-badge">
+                    Уверенность: {{ "%.1f"|format(confidence * 100) }}%
+                </div>
+            </div>
+
+            <h3>📊 Топ рекомендаций:</h3>
+            <ul class="recommendation-list">
+                {% for rec in all_recommendations %}
+                <li class="recommendation-item">
+                    <span class="game-title">{{ loop.index }}. {{ rec.game.title }}</span>
+                    <span class="game-score">{{ rec.score }}%</span>
+                </li>
+                {% endfor %}
+            </ul>
+
+            <div class="text-center">
+                <a href="/restart" class="btn">Пройти опрос заново</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

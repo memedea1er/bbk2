@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вопрос</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card fade-in">
+            <div class="progress-container">
+                <div class="progress-text">Вопрос {{ progress }} из ~7</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: {{ (progress / 7) * 100 }}%"></div>
+                </div>
+            </div>
+
+            <form action="/answer" method="post" class="question-form">
+                <input type="hidden" name="session_id" value="{{ session_id }}">
+                <input type="hidden" name="question_id" value="{{ question.id }}">
+
+                <div class="question-type">{{ question.type }}</div>
+                <h3>{{ question.text }}</h3>
+
+                <div class="answers-grid">
+                    <div class="answer-option">
+                        <input type="radio" name="answer" value="1" id="answer1" required>
+                        <label for="answer1">1 - Совсем не нравится</label>
+                    </div>
+                    <div class="answer-option">
+                        <input type="radio" name="answer" value="2" id="answer2">
+                        <label for="answer2">2 - Скорее не нравится</label>
+                    </div>
+                    <div class="answer-option">
+                        <input type="radio" name="answer" value="3" id="answer3">
+                        <label for="answer3">3 - Нейтрально</label>
+                    </div>
+                    <div class="answer-option">
+                        <input type="radio" name="answer" value="4" id="answer4">
+                        <label for="answer4">4 - Скорее нравится</label>
+                    </div>
+                    <div class="answer-option">
+                        <input type="radio" name="answer" value="5" id="answer5">
+                        <label for="answer5">5 - Очень нравится</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Следующий вопрос</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
