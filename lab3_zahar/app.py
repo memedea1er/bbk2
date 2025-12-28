@@ -29,64 +29,6 @@ def load_hypotheses() -> List[Hypothesis]:
     """Загрузка гипотез из CSV файла"""
     hypotheses = []
 
-    # Тестовые данные если файла нет
-    test_data = [
-        {
-            "name": "Пляжный отдых на Мальдивах",
-            "prior": 0.1,
-            "evidence_map": {
-                1: (0.95, 0.1),
-                2: (0.9, 0.2),
-                5: (0.3, 0.7),
-                6: (0.85, 0.3),
-                8: (0.7, 0.4)
-            }
-        },
-        {
-            "name": "Горнолыжный курорт в Австрии",
-            "prior": 0.1,
-            "evidence_map": {
-                2: (0.7, 0.4),
-                3: (0.9, 0.15),
-                4: (0.6, 0.5),
-                7: (0.8, 0.25),
-                8: (0.3, 0.7)
-            }
-        },
-        {
-            "name": "Сафари в Кении",
-            "prior": 0.1,
-            "evidence_map": {
-                3: (0.85, 0.2),
-                4: (0.7, 0.4),
-                5: (0.6, 0.5),
-                7: (0.75, 0.3),
-                8: (0.8, 0.2),
-                2: (0.5, 0.6)
-            }
-        },
-        {
-            "name": "Городской отдых в Париже",
-            "prior": 0.1,
-            "evidence_map": {
-                2: (0.85, 0.3),
-                4: (0.9, 0.2),
-                6: (0.7, 0.4),
-                8: (0.6, 0.5)
-            }
-        },
-        {
-            "name": "Экскурсии в Риме",
-            "prior": 0.1,
-            "evidence_map": {
-                2: (0.8, 0.35),
-                4: (0.95, 0.15),
-                6: (0.65, 0.45),
-                8: (0.7, 0.3)
-            }
-        }
-    ]
-
     try:
         csv_path = Path("data/knowledge_base.csv")
 
@@ -120,16 +62,9 @@ def load_hypotheses() -> List[Hypothesis]:
                         prior=prior,
                         evidence_map=evidence_map
                     ))
-        else:
-            # Используем тестовые данные
-            for data in test_data:
-                hypotheses.append(Hypothesis(**data))
 
     except Exception as e:
         print(f"Ошибка загрузки гипотез: {e}")
-        # Используем тестовые данные в случае ошибки
-        for data in test_data[:3]:
-            hypotheses.append(Hypothesis(**data))
 
     return hypotheses
 
