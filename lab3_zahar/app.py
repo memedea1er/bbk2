@@ -136,48 +136,13 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 @app.get("/", response_class=HTMLResponse)
 async def read_root():
     """Главная страница"""
-    return """
-    <!DOCTYPE html>
-    <html lang="ru">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Выбор места отдыха</title>
-        <link rel="stylesheet" href="/static/style.css" />
-    </head>
-    <body>
-        <div class="container">
-            <header>
-                <h1>Куда поехать отдыхать?</h1>
-                <p class="subtitle">Ответьте на несколько вопросов — и мы подберём идеальное место</p>
-            </header>
-
-            <main>
-                <div class="question-box" id="questionBox">
-                    <p id="question" class="question-text">Загрузка...</p>
-                    <div class="scale" id="scale"></div>
-                </div>
-
-                <div class="result-box" id="resultBox" style="display: none;">
-                    <div class="result-icon">✨</div>
-                    <h2>Ваш идеальный отдых:</h2>
-                    <p id="resultText" class="result-text"></p>
-                    <button class="restart-btn" onclick="restartSession()">Начать заново</button>
-                </div>
-            </main>
-
-            <footer>
-                <p>Нейлеровская система поддержки решений</p>
-            </footer>
-        </div>
-
-        <script src="/static/script.js"></script>
-    </body>
-    </html>
-    """
+    # Читаем HTML из файла
+    with open("templates/index.html", "r", encoding="utf-8") as f:
+        html_content = f.read()
+    return HTMLResponse(content=html_content)
 
 
-# Для разработки: отдаём статические файлы напрямую
+# Для разработки: отдаём статические файлы напрямую (опционально)
 @app.get("/style.css")
 async def get_css():
     return FileResponse("static/style.css")

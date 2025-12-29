@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Выбор видеоигры</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Во что хотите сыграть?</h1>
+            <p class="subtitle">Ответьте на несколько вопросов — и мы подберём идеальную игру</p>
+        </header>
+
+        <main>
+            <div class="question-box" id="questionBox">
+                <p id="question" class="question-text">Загрузка...</p>
+                <div class="scale" id="scale"></div>
+            </div>
+
+            <div class="result-box" id="resultBox" style="display: none;">
+                <div class="result-icon">✨</div>
+                <h2>Ваша идеальная игра:</h2>
+                <p id="resultText" class="result-text"></p>
+                <button class="restart-btn" onclick="restartSession()">Начать заново</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Нейлеровская система поддержки решений</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
